@@ -21,30 +21,23 @@ custom_js:
 <vegachart schema-url="{{ site.baseurl }}/assets/json/natural_causes_dashboard.json" style="width: 100%"></vegachart>
 
 
-## Description 1
+## Description
 
-#### Design Choices 
 
-In this chart, I am visualizing the statics of the square footage of each building based on the year it was constructed. To do this, I used a line chart so the end user can compare the statistics overtime. Such as seeing if the average square footage has gone up each year. When creating the visualization I encoded the "Year Constructed" to a Temporal and the statistics to Quantitative. I also added an interactive dropdown menu that allows the user to select which statistic they would like to emphasize. The chart consists of 8 unique statistics and their uniquely colored line.The statistic options I made available are mean, min, 25%, 50%, 75%, and max. When one is selected that line is the only one that remains colored and the rest lose opacity and turn grey. This way the user can easily visualize the line they are trying to emphasize.
+In this chart, I am visualizing the breakdown of natural deaths in the US by demographics. The first chart, a heatmap, demonstrates the mean of number of natural deaths per month split up by both age group, and gender. Each box is a shade of grey, based on how high or low the number of deaths is. When one of the boxes are selected, the bar chart on its right updates to futher break down the number of deaths by race. Each time a new box is selected, the bar plot updates showing the breakdown of race by age group and gender selected. 
 
-#### Data Transformation Discussion
-
-There were many data transformations that I performed on this dataset. For starters, I made every instance that was 0 of Square Footage and Year Constructed equal to null. Afterwards, I grouped by Year Constructed and Square Footage so I could grab each Year's statistics. I also changed the Year Constructed column from int to datetime for easy visualization. Finally, I "melted" the dataframe and made it so each row contained a year constructed, one of the respective statistics, and its stat value. 
+This chart was created by myself using Dataset 1 and Altair in the python notebook listed at the bottom of this page.
 
 ## Plot 2: Male vs Female Drug Overdoses by Age Group
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/drug_overdose.json" style="width: 100%"></vegachart>
 
 
-## Description 2
+## Description 
 
-#### Design Choices 
+In this chart, I am visualizing the breakdown of drug related deaths in America broken up by once again, age group and gender. The chart demonstrates a grouped bar chart displaying the number of drug related deaths, per 100,000 people, broken up by age group and the genders side by side.
 
-In this chart, I am visualizing the statics of the square footage of each building based on the type of building. To do this, I used a bar chart so the end user can compare the statistics between types of buildings. When creating the visualization I encoded the "Usage Description" to a Nominal and the statistics to Quantitative. I also added an interactive dropdown menu that allows the user to select which statistic they would like to look at. The chart consists of 6 unique statistics and plots the user can pick from and the building types are uniquely colored bars. The statistic options I made available are mean, min, 25%, 50%, 75%, and max. When one is selected that plot is the only one that shows up. This way the user can easily visualize the building types and their statistics side by side.
-
-#### Data Transformation Discussion
-
-There were many data transformations that I performed on this dataset. For starters, I made every instance that was 0 of Square Footage equal to null. Afterwards, I grouped by Unique Description and Square Footage so I could grab each building type's statistics. Finally, I "melted" the dataframe and made it so each row contained a building type, one of the respective statistics, and its stat value.
+This chart was created by myself using Dataset 2 and Altair in the python notebook listed at the bottom of this page.
 
 
 ## Plot 3: Male vs Female Drug Overdoses by Age Group
@@ -52,15 +45,11 @@ There were many data transformations that I performed on this dataset. For start
 <vegachart schema-url="{{ site.baseurl }}/assets/json/unnatural.json" style="width: 100%"></vegachart>
 
 
-## Description 2
+## Description
 
-#### Design Choices 
+#In this chart, I am visualizing the breakdown of unnatural deaths in the US by demographics using a bar and tick plot. This plot is interactive as it allows the user to select either "Male" or "Female" to display its respective plot. The bars in this plot resemble the average number of unnatural deaths per year represented by hundreds, seperated by both gender and age group. The tick in this plot resemebles the average number of drug related deaths per year, also seperated by both gender and age group. This allows us to make a comparison between the number of drug related deaths to total unnatural deaths per year.
 
-In this chart, I am visualizing the statics of the square footage of each building based on the type of building. To do this, I used a bar chart so the end user can compare the statistics between types of buildings. When creating the visualization I encoded the "Usage Description" to a Nominal and the statistics to Quantitative. I also added an interactive dropdown menu that allows the user to select which statistic they would like to look at. The chart consists of 6 unique statistics and plots the user can pick from and the building types are uniquely colored bars. The statistic options I made available are mean, min, 25%, 50%, 75%, and max. When one is selected that plot is the only one that shows up. This way the user can easily visualize the building types and their statistics side by side.
-
-#### Data Transformation Discussion
-
-There were many data transformations that I performed on this dataset. For starters, I made every instance that was 0 of Square Footage equal to null. Afterwards, I grouped by Unique Description and Square Footage so I could grab each building type's statistics. Finally, I "melted" the dataframe and made it so each row contained a building type, one of the respective statistics, and its stat value.
+This chart was created by myself using a merged version of Dataset 1, Dataset 2 and Altair in the python notebook listed at the bottom of this page.
 
 
 <!-- these are written in a combo of html and liquid --> 
@@ -71,7 +60,7 @@ There were many data transformations that I performed on this dataset. For start
 
 
 <div class="right">
-{% include elements/button.html link="https://github.com/BradyBrooks/bradybrooks.github.io/blob/main/python_notebooks/Project%20for%20HW5.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/BradyBrooks/bradybrooks.github.io/blob/main/python_notebooks/FinalProjectWorkbook.ipynb" text="The Analysis" %}
 </div>
 
 <div class="left">
